@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Locations Page | Cupful of Wonders</title>
+    <link rel="shortcut icon" href="image/website-icon.png" type="image/png">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__background--dark">
+            <div class="header__container container">
+                <nav data-include="header-nav.partial.html"></nav>
+            </div>
+        </div>
+    </header>
+    <div data-include="cart.partial.html"></div>
+    <main class="main">
+        <div class="map">
+            <div class="map__container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1222.926483641811!2d24.03261995055839!3d49.83923799717067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDnCsDUwJzIxLjMiTiAyNMKwMDInMDAuNCJF!5e1!3m2!1suk!2ses!4v1702984164796!5m2!1suk!2ses"
+                    allowfullscreen="" loading="lazy" allowtransparency
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__wrap" data-include="footer.partial.html"></div>
+        </div>
+    </footer>
+    <script type="module" src="js/"></script>
+    <script src="https://unpkg.com/html-data-include@3.3.3/html-data-include.js"></script>
+</body>
+
+</html>

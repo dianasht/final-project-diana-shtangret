@@ -1,0 +1,40 @@
+.map iframe {
+    width: 100%;
+    height: 576px;
+    border: 0;
+  }
+    
+  .progress.active:before {
+    animation: progress 5s linear forwards;
+  }
+  
+  @keyframes progress {
+    100% {
+      right: 100%;
+    }
+  }
+  
+  @keyframes shake {
+    0% {
+      margin-left: 0rem;
+    }
+  
+    25% {
+      margin-left: 0.5rem;
+    }
+  
+    75% {
+      margin-left: -0.5rem;
+    }
+  
+    100% {
+      margin-left: 0rem;
+    }
+  }
+  
+  @keyframes progress {
+    100% {
+      right: 100%;
+    }
+  }
+  

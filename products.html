@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products Page | Cupful of Wonders</title>
+    <link rel="shortcut icon" href="image/website-icon.png" type="image/png">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <header>
+                <h1>Our Products</h1>
+                <div class="shopping">
+                    <img src="image/shopping-bag.svg" alt="shopping bag">
+                    <span class="quantity">0</span>
+                </div>
+            </header>
+            <div class="list"></div>
+        </div>
+        <div class="card">
+            <h1>Card</h1>
+            <ul class="listCard"></ul>
+            <div class="checkOut">
+                <div class="total">0</div>
+                <div class="closeShopping">Close</div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__wrap" data-include="footer.partial.html"></div>
+        </div>
+    </footer>
+    <script src="js/products.js"></script>
+    <script src="https://unpkg.com/html-data-include@3.3.3/html-data-include.js"></script>
+</body>
+
+</html>

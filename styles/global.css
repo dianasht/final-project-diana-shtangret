@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --btn-outline-light: #fff;
+    --btn-outline-hover: #445f66;
+    --light-link-header: #ffffffd4;
+    --input-background: #e5e5e5;
+    --background-dark: #27292b;
+    --our-bread-text-description: rgb(112,110,110);
+    --menu-btn-icon-light-hover: #ffffff1c;
+    --menu-btn-icon-dark-hover: #ffca843d;
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+}
+
+img {
+    display:block;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 24px;
+    margin: auto;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.header__background--dark {
+    background: var(--background-dark);
+}
+
+.footer{
+    background-color:#27292b
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 32px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        padding: 0 40px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        padding: 0 15px;
+    }
+}

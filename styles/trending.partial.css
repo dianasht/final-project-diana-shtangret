@@ -1,0 +1,144 @@
+.trending__headline {
+    font-family: 'Prata', serif;
+    font-size: 50px;
+    color: rgb(39, 46, 59);
+    padding: 10px;
+}
+.trending__description {
+    font-family: 'Prata', serif;
+    color: rgb(40, 52, 60);
+    font-size: 30px;
+    padding: 20px;
+}
+.trending-carousel__container {
+    display: flex;
+}
+
+hr {
+    margin: 10px;
+    border: none;
+}
+
+.trending {
+    background: linear-gradient(to top, rgba(67, 86, 101, 0.753), rgba(123, 145, 161, 0.808));
+    background-position: 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 90px 0 90px;
+    text-align: center;
+}
+
+.trending__title {
+    font-family: 'Prata', serif;
+    font-weight: 400;
+    font-size: 27px;
+    color:rgb(37, 51, 65);
+    flex-shrink: 0;
+}
+
+.trending__text {
+    margin-bottom: 45px;
+    color: var(--light-color);
+    font-family: 'Lato', serif;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.trending__image {
+    display: block;
+    width: 300px;
+    margin: auto;
+}
+.btn__shop {
+    background-color: #374951;
+    color:#201d1d;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Prata', serif;
+    font-size: 20px;
+}
+a {
+    color: #201d1d;
+  }
+
+.prev,
+.next {
+    border: none;
+    border-radius: 50px;
+    background-color: transparent;
+    padding: 8px 12px;
+    margin: 20px 8px 0;
+    color: black;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: var(--btn-primary-hover);
+    cursor: pointer;
+}
+
+@media (min-width: 320px) {
+    .trending__text {
+        padding: 0 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .trending__wrap {
+        max-width: 620px;
+    }
+
+    .trending__text {
+        margin: 0 30px 45px;
+    }
+}
+
+@media (min-width: 992px) {
+    .trending__wrap {
+        max-width: 840px;
+    }
+
+    .trending__text {
+        margin: 0 25px 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .trending__container.container {
+        position: relative;
+    }
+
+    .trending {
+        padding: 10px 0 30px;
+    }
+
+    .prev,
+    .next {
+        position: absolute;
+        top: 40%;
+    }
+
+    .prev {
+        left: 13%;
+    }
+
+    .next {
+        right: 13%;
+    }
+}
+
+@supports (-webkit-touch-callout : none) {
+    .trending {
+        background-attachment: scroll;
+    }
+}
+
+@supports not (-webkit-touch-callout : none) {
+    .trending {
+        background-attachment: fixed;
+    }
+}
+
+
