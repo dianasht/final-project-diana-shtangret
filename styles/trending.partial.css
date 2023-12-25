@@ -20,7 +20,7 @@ hr {
 }
 
 .trending {
-    background: linear-gradient(to top, rgba(67, 86, 101, 0.753), rgba(123, 145, 161, 0.808));
+    background: linear-gradient(to top, rgba(75, 81, 85, 0.753), rgba(126, 137, 144, 0.808));
     background-position: 20%;
     background-size: cover;
     background-repeat: no-repeat;

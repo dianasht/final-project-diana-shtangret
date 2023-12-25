@@ -1,0 +1,172 @@
+.header {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    background-color: rgb(51, 54, 57);
+}
+
+header.header {
+    padding: 0;
+    padding-right: 0;
+}
+
+.header a {
+    color: rgb(148, 159, 170);
+    font-family: 'Prata', serif;
+    font-size: 20px;
+}
+
+.fixed {
+    width: 100%;
+    position: fixed;
+}
+
+.header__background {
+    background-image: linear-gradient(#2e2f328c, #1f202299), url(../image/tea-shop-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.3px;
+    justify-content: space-between;
+    padding: 40px 0;
+    gap: 15px;
+}
+.header__nav-img {
+    width: 150px;
+    padding-right: 20px;
+}
+
+.header__nav-link {
+    display: block;
+    width: 300px;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 400;
+    font-size: 35px;
+    letter-spacing: 0px;
+    gap: 20px;
+}
+
+.nav-list__link a {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-list__link a::before {
+    content: "";
+    bottom: -4px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    color: var(--light-color);
+    opacity: 0.8;
+    transform: scaleX(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-list__link a:hover::before {
+    transform: scaleX(1);
+    background-color: var(--light-color);
+}
+
+.header__nav-products {
+    display: none;
+}
+
+.header__products-btn:hover {
+    opacity: 0.6;
+}
+
+@media (min-width: 992px) {
+    .header__background {
+        background-position: 51% 50%;
+    }
+
+    .header__nav {
+        padding: 45px 0;
+        gap: 8px;
+    }
+
+    .header__products-btn {
+        display: none;
+    }
+
+    .header__nav-products {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-left: auto;
+        order: 2;
+        gap: 8px;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        font-size: 15px;
+        gap: 30px;
+    }
+
+    .header__nav-btn {
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 1180px) {
+    .header {
+        padding: 0;
+    }
+
+    .nav-list {
+        height: 32px;
+    }
+
+    .header__nav {
+        padding: 45px 0;
+    }
+
+    .header__nav-link {
+        max-width: 220px;
+    }
+
+    .header__nav-btn {
+        margin-left: 12px;
+    }
+}
+
+@media (min-width: 1300px) {
+
+    .header {
+        padding: 0;
+    }
+
+    .header__nav {
+        gap: 15px;
+    }
+
+    .header__nav-products {
+        order: 0;
+    }
+
+    .btn-sub-nav {
+        display: none;
+    }
+
+    .btn-nav {
+        display: block;
+    }
+
+    .header__nav-btn {
+        margin-left: 0;
+    }
+}

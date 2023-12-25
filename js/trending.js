@@ -28,7 +28,6 @@ document.querySelector(".prev").addEventListener("click", prevSlide);
 document.querySelector(".next").addEventListener("click", nextSlide);
 
 const testing = 5;
-// console.log(testing);
 
 
 

@@ -1,4 +1,3 @@
-
 let openShopping = document.querySelector('.shopping');
 let closeShopping = document.querySelector('.closeShopping');
 let list = document.querySelector('.list');
@@ -14,8 +13,6 @@ openShopping.addEventListener('click', () => {
 closeShopping.addEventListener('click', () => {
   body.classList.remove('active');
 });
-
-
 
 let products = [
   {
@@ -44,8 +41,8 @@ let products = [
   },
   {
     id: 5,
-    name: 'Magic Mango Tea',
-    image: 'b-magic.png',
+    name: 'White Sakura Beauty Blend',
+    image: 'whitesakura.png',
     price: 10.00
   },
   {
@@ -88,7 +85,7 @@ let products = [
     id: 12,
     name: 'Earl Grey',
     image: 'grey.png',
-    price: 9.00
+    price: 9.00 
   },
 ];
 
@@ -135,9 +132,10 @@ function reloadCard() {
       listCard.appendChild(newDiv);
     }
   })
-  total.innerText = totalPrice.toLocaleString();
+  total.innerText = `$${totalPrice.toLocaleString()}`;
   quantity.innerText = count;
 }
+
 function changeQuantity(key, quantity) {
   if (quantity == 0) {
     delete listCards[key];
@@ -147,7 +145,25 @@ function changeQuantity(key, quantity) {
   }
   reloadCard();
 }
+
+function searchProducts() {
+  let searchInput = document.getElementById('searchInput').value.toLowerCase();
+  let filteredProducts = products.filter(product => product.name.toLowerCase().includes(searchInput));
+
+  list.innerHTML = '';
+
+  filteredProducts.forEach((value, key) => {
+    let newDiv = document.createElement('div');
+    newDiv.classList.add('item');
+    newDiv.innerHTML = `
+      <img src="image/${value.image}">
+      <div class="title">${value.name}</div>
+      <div class="price">${value.price.toLocaleString()}</div>
+      <button onclick="addToCard(${key})">Add To Card</button>`;
+    list.appendChild(newDiv);
+  });
+}
+
 function saveCartToLocalStorage() {
   localStorage.setItem('cart', JSON.stringify(listCards));
 }
-

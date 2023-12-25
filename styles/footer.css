@@ -13,7 +13,7 @@
   
   .footer__nav {
     padding-top: 20px;
-    border-bottom: 1px solid var(--text-variant-grey);
+    border-bottom: 1px solid rgb(150, 153, 157);
   }
   
   .footer__logo,

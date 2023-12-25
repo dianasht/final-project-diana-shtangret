@@ -30,7 +30,7 @@ img {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     padding: 0 24px;
     margin: auto;
 }
@@ -41,11 +41,6 @@ li {
 
 a {
     text-decoration: none;
-}
-
-
-.header__background--dark {
-    background: var(--background-dark);
 }
 
 .footer{
