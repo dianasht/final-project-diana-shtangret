@@ -85,7 +85,7 @@ let products = [
     id: 12,
     name: 'Earl Grey',
     image: 'grey.png',
-    price: 9.00 
+    price: 9.00
   },
 ];
 
@@ -108,6 +108,8 @@ function addToCard(key) {
   if (listCards[key] == null) {
     listCards[key] = JSON.parse(JSON.stringify(products[key]));
     listCards[key].quantity = 1;
+  } else {
+    listCards[key].quantity += 1;
   }
   reloadCard();
 }
@@ -137,7 +139,7 @@ function reloadCard() {
 }
 
 function changeQuantity(key, quantity) {
-  if (quantity == 0) {
+  if (quantity === 0) {
     delete listCards[key];
   } else {
     listCards[key].quantity = quantity;
@@ -158,18 +160,35 @@ function searchProducts() {
     notFoundDiv.textContent = 'No products found.';
     list.appendChild(notFoundDiv);
   } else {
-    filteredProducts.forEach((value, key) => {
+    filteredProducts.forEach((product) => {
       let newDiv = document.createElement('div');
       newDiv.classList.add('item');
       newDiv.innerHTML = `
-        <img src="image/${value.image}">
-        <div class="title">${value.name}</div>
-        <div class="price">${value.price.toLocaleString()}</div>
-        <button onclick="addToCard(${key})">Add To Card</button>`;
+        <img src="image/${product.image}">
+        <div class="title">${product.name}</div>
+        <div class="price">${product.price.toLocaleString()}</div>
+        <button onclick="addToCardByName('${product.name}')">Add To Card</button>`;
       list.appendChild(newDiv);
     });
   }
 }
+
+function addToCardByName(productName) {
+  const foundProduct = products.find(product => product.name === productName);
+
+  if (foundProduct) {
+    const originalIndex = products.indexOf(foundProduct);
+
+    if (listCards[originalIndex] == null) {
+      listCards[originalIndex] = JSON.parse(JSON.stringify(foundProduct));
+      listCards[originalIndex].quantity = 1;
+    } else {
+      listCards[originalIndex].quantity += 1;
+    }
+    reloadCard();
+  }
+}
+
 
 function saveCartToLocalStorage() {
   localStorage.setItem('cart', JSON.stringify(listCards));
