@@ -152,18 +152,26 @@ function searchProducts() {
 
   list.innerHTML = '';
 
-  filteredProducts.forEach((value, key) => {
-    let newDiv = document.createElement('div');
-    newDiv.classList.add('item');
-    newDiv.innerHTML = `
-      <img src="image/${value.image}">
-      <div class="title">${value.name}</div>
-      <div class="price">${value.price.toLocaleString()}</div>
-      <button onclick="addToCard(${key})">Add To Card</button>`;
-    list.appendChild(newDiv);
-  });
+  if (filteredProducts.length === 0) {
+    let notFoundDiv = document.createElement('div');
+    notFoundDiv.classList.add('not-found');
+    notFoundDiv.textContent = 'No products found.';
+    list.appendChild(notFoundDiv);
+  } else {
+    filteredProducts.forEach((value, key) => {
+      let newDiv = document.createElement('div');
+      newDiv.classList.add('item');
+      newDiv.innerHTML = `
+        <img src="image/${value.image}">
+        <div class="title">${value.name}</div>
+        <div class="price">${value.price.toLocaleString()}</div>
+        <button onclick="addToCard(${key})">Add To Card</button>`;
+      list.appendChild(newDiv);
+    });
+  }
 }
 
 function saveCartToLocalStorage() {
   localStorage.setItem('cart', JSON.stringify(listCards));
 }
+
