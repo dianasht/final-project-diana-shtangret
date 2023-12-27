@@ -190,7 +190,3 @@ function addToCardByName(productName) {
 }
 
 
-function saveCartToLocalStorage() {
-  localStorage.setItem('cart', JSON.stringify(listCards));
-}
-
